@@ -1,0 +1,151 @@
+
+:root {
+    --brand-text-color: #186caf;
+    --title-font-size: 6vmin;
+    --text-font-size: 3vmin;
+}
+
+body {
+    margin: 3vh 14vw;
+    background-color: white;
+}
+
+h1 {
+    all: unset;
+    margin: 0;
+    font-size: var(--title-font-size);
+    display: block;
+    color: var(--brand-text-color)
+}
+
+h3 {
+    margin: 1vh 0;
+    font-size: var(--text-font-size);
+}
+
+p {
+    font-size: var(--text-font-size);
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+#logo {
+    all: unset;
+    float: left;
+    margin-left: auto;
+    height: calc(var(--title-font-size) * 2);
+}
+
+#page-top {
+    position: relative;
+    padding: 3vh 0;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#page-top::after {
+    content: '';
+    background: #e4f5f4;
+    position: absolute;
+    width: 100%;
+    height: 3vh;
+    bottom: 0vh;
+    left: 0;
+}
+
+
+#page-content {
+    margin: 3vh 0;
+    display: flex;
+    width: 100%;
+}
+
+.section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    gap: 2vw;
+}
+
+.section-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+}
+
+.section-left h3 {
+    font-size: 3.2vmin;
+}
+
+.section-left img {
+    max-width: 15vw;
+}
+
+.section-right {
+    flex: 3;
+    width: 100%;
+    font-size: 3vmin;
+}
+
+
+.q {
+    position: relative;
+    background-color: #fee98f;
+}
+.q span::after {
+    content: "/";
+}
+.q span:last-child::after {
+    content: ")";
+}
+
+.q::before {
+    content: "(";
+}
+
+/* .q::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    background-color: #fee98f;
+    pointer-events: none;
+    z-index: -10;
+} */
+
+.q span {
+    all: unset;
+    text-wrap: nowrap;
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
+    margin: 0 3px;
+    border-bottom: solid 3px;
+    border-color: 00000000;
+}
+.q span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 3px;
+    top: 0;
+    bottom: 3px;
+    background-color: var(--answer-highlight, #00000000);
+    transform: translateX(-3px);
+    z-index: -1;
+
+    border-radius: 10px;
+    transition: background-color .3s ease-in;
+}
