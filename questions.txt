@@ -1,0 +1,36 @@
+struct answer tonnen_1[] = {
+    {"400", 3, 0, NULL},
+    {"340", 3, 0, NULL},
+    {"970", 3, 0, NULL}
+};
+
+struct answer place_2[] = {
+	{"Brasilien", 9, 0, NULL},
+	{"Nordkorea", 9, 0, NULL},
+    {"Südkorea", 8, 0, NULL},
+};
+
+struct answer want_3[] = {
+	{"Deutschland", 11, 0, NULL},
+	{"Turkey", 6, 0, NULL},
+    {"Polen", 5, 0, NULL},
+};
+
+struct answer prod_double_4[] = {
+	{"11", 2, 0, NULL},
+	{"8", 1, 0, NULL},
+    {"15", 2, 0, NULL},
+};
+
+struct question section0[] = {
+	{0, 1, 0, 3, tonnen_1, 0, 1, 0},
+	{0, 1, 0, 3, place_2, 2, 1, 0},
+	{0, 1, 0, 3, want_3, 0, 1, 0},
+	{0, 1, 0, 3, prod_double_4, 2, 1, 0}
+};
+
+struct section sections[] = {
+	{section0, 4}
+};
+
+unsigned short section_n = sizeof(sections) / sizeof(sections[0]);

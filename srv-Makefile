@@ -1,0 +1,9 @@
+CC = gcc
+FLAGS = -g -Iincludes
+LINKS = -lmagic -lssl -lcrypto -lm -luuid
+
+server: bin/server.o bin/http.o bin/hash-table.o bin/cnet.o 
+	$(CC) $(FLAGS) -o $@ $^ $(LINKS)
+
+bin/%.o: src/%.c
+	$(CC) $(FLAGS) -o $@ -c $^
