@@ -5,10 +5,10 @@ async function get(url) {
 	let responce = await fetch(url,{
 		credentials: 'omit',
 		headers: {
-			"X-UID": localStorage.uid || ""
+			"x-uid": localStorage.uid || ""
 		}
 	});
-	localStorage.uid = responce.headers.get("X-UID");
+	localStorage.uid = responce.headers.get("x-uid");
 	return await responce.text();
 }
 
@@ -17,11 +17,11 @@ async function post(url, body) {
 		method: "POST",
 		credentials: 'omit',
 		headers: {
-			"X-UID": localStorage.uid || ""
+			"x-uid": localStorage.uid || ""
 		},
 		body
 	});
-	localStorage.uid = responce.headers.get("X-UID");
+	localStorage.uid = responce.headers.get("x-uid");
 	return responce;
 }
 
